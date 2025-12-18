@@ -1,0 +1,216 @@
+
+2025-12-18 10:15:29,662 [26] [014c28ab-121f-4da9-982e-047bb49c258b] INFO  BP_CDWS.wsCobranzasDinamicas - Iniciando transaccion, Servicio:COBR_GINIH, Operacion=C, Trama=sales-company                           0501000000098       
+2025-12-18 10:15:29,771 [26] [014c28ab-121f-4da9-982e-047bb49c258b] INFO  wsGINIH.GINIH - fechaCreacionStr: 2022-12
+2025-12-18 10:15:29,787 [26] [014c28ab-121f-4da9-982e-047bb49c258b] INFO  wsGINIH.GINIH - fechaCreacionTokenLogin: 1/12/2022 00:00:00
+2025-12-18 10:15:33,037 [26] [014c28ab-121f-4da9-982e-047bb49c258b] INFO  wsGINIH.GINIH - Consulta wsGINIH -> companyId: sales-company,customerId: 0501000000098
+2025-12-18 10:15:33,052 [26] [014c28ab-121f-4da9-982e-047bb49c258b] INFO  wsGINIH.GINIH - Metodo que se utiliza para realizar la solicitud: GET
+2025-12-18 10:15:33,646 [26] [014c28ab-121f-4da9-982e-047bb49c258b] INFO  wsGINIH.GINIH - Respuesta del JWT:eyJraWQiOiJmK3pHeDBkQnFrS1BJVFoxK25FQ0haS3FhaDRSdWZOejBMV25WMDJrTFlBPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIzNGQ4YjRmOC01MDUxLTcwMDYtYTM2Ny1lZGFhZGJmN2M0YzkiLCJjb2duaXRvOmdyb3VwcyI6WyJBcGkiXSwiYWRkcmVzcyI6eyJmb3JtYXR0ZWQiOiJIb25kdXJhcyJ9LCJjb2duaXRvOnByZWZlcnJlZF9yb2xlIjoiYXJuOmF3czppYW06OjQ3NTk1ODMwNzYyNTpyb2xlXC91cy1lYXN0LTFfWTdaQ0NhOHZBLUFwaUdyb3VwUm9sZSIsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xX1k3WkNDYTh2QSIsImNvZ25pdG86dXNlcm5hbWUiOiJjaW50aGlhY21AYmFucGFpcy5obiIsIm9yaWdpbl9qdGkiOiI5MjA3M2Y5Yi04Zjc4LTRmMTEtYWQ2YS05NTc2ODk3MDBlODAiLCJjb2duaXRvOnJvbGVzIjpbImFybjphd3M6aWFtOjo0NzU5NTgzMDc2MjU6cm9sZVwvdXMtZWFzdC0xX1k3WkNDYTh2QS1BcGlHcm91cFJvbGUiXSwiYXVkIjoiMzNjamE2ZXRycWVjOWRldmZtZG45MTZnc2oiLCJldmVudF9pZCI6ImU2OTJmYWE5LWMzMTMtNDdmMC05ZmZhLWVmNTczYTBkMDUxZCIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNzY2MDc0NTMyLCJuYW1lIjoiQmFucGFpcyIsInBob25lX251bWJlciI6Iis1MDQ5OTk5OTk5OSIsImV4cCI6MTc2NjA3NTQzMywiaWF0IjoxNzY2MDc0NTMzLCJmYW1pbHlfbmFtZSI6IlVzZXIyIiwianRpIjoiNzVhMDU1ODAtNjg4Mi00YjEyLTlmYzUtNjZlYzgzNmExZTVjIiwiZW1haWwiOiJjaW50aGlhY21AYmFucGFpcy5obiJ9.K9L4e_8jGdl0dtiyPSl7hByg595a-VAvt7trLrMnr-N9KQBo_CXfMdONZa3RsZqgeh_x0rnvCi4wI1_ZgCmS5ZayqZUUa9_bWRRZFJmsvq4M9aI592eRl71K20cWbHiwG-kt5SKc8m3k3c4YxiCXOMHb0UMXPo-6ge9pQ086SM3QowjWH9n4oF14_8HyZhASx36pSOswroailFMddbP309Y0ueeNAxWFc4Hmit48HOeWgbpRtY6OZqFubobpLpNSBAnpbGhJ3ToAXETsw2AIgoEPunIzjqymNC_mEDqFlDvsCbUKzDkVGTRloeu8EOh7fmpQsWaOrh47DVWZJPhtxA
+2025-12-18 10:15:33,662 [26] [014c28ab-121f-4da9-982e-047bb49c258b] INFO  wsGINIH.GINIH - Metodo que se utiliza para realizar la solicitud: GET
+2025-12-18 10:15:39,287 [26] [014c28ab-121f-4da9-982e-047bb49c258b] DEBUG wsGINIH.GINIH - Respuesta JSON Consulta a cliente GINIH: {"status":"success","message":"Datos obtenidos correctamente","data":[{"id":"70d3822b18fb4b8c8bd204c92cbde494","name":"Invoice - yx8rv4lq","company":{"id":"sales-company","name":"Sales The Big Company"},"customer":{"id":"0501000000098","name":"Mickel Sample"},"amount":[{"value":513357,"currency":"HNL","breakdown":{"subtotal":513357,"processingFee":0,"surcharge":0,"discount":0,"tax":0,"total":513357}}],"documentReference":"","description":"Invoice - yx8rv4lq","dueDate":"2025-12-18T16:15:37.488Z","date":"undefined","status":"pending","url":"","payableOptions":["full"]}],"code":{"value":124,"code":124,"name":"successful_data"},"timestamp":"2025-12-18T16:15:39.211Z","metadata":{"items":1,"hasMore":false,"nextToken":null,"paginationToken":null}}
+2025-12-18 10:15:39,349 [26] [014c28ab-121f-4da9-982e-047bb49c258b] ERROR BP_CDWS.wsCobranzasDinamicas - Error consultando servicio: COBR_GINIH
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> Newtonsoft.Json.JsonReaderException: Could not convert string to DateTime: undefined. Path 'data[0].date', line 1, position 518.
+   at Newtonsoft.Json.JsonReader.ReadDateTimeString(String s)
+   at Newtonsoft.Json.JsonTextReader.FinishReadQuotedStringValue(ReadType readType)
+   at Newtonsoft.Json.JsonTextReader.ReadStringValue(ReadType readType)
+   at Newtonsoft.Json.JsonTextReader.ReadAsDateTime()
+   at Newtonsoft.Json.JsonReader.ReadForType(JsonContract contract, Boolean hasConverter)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateList(IList list, JsonReader reader, JsonArrayContract contract, JsonProperty containerProperty, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateList(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, Object existingValue, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at wsGINIH.GINIH.Consulta(String companyId, String customerId)
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.RuntimeType.InvokeMember(String name, BindingFlags bindingFlags, Binder binder, Object target, Object[] providedArgs, ParameterModifier[] modifiers, CultureInfo culture, String[] namedParams)
+   at System.Type.InvokeMember(String name, BindingFlags invokeAttr, Binder binder, Object target, Object[] args)
+   at BP_CDWS.DLLInvoker.InvokeMethod[T](String urlWs, String typeName, String methodName, String user, String password, String domain, Object[] args)
+   at BP_CDWS.wsCobranzasDinamicas.ProcesarTransaccion(String servicio, String operacion, String tramaEntrada)
+2025-12-18 10:15:39,380 [26] [014c28ab-121f-4da9-982e-047bb49c258b] INFO  BP_CDWS.wsCobranzasDinamicas - Finalizando transaccion, Servicio:COBR_GINIH, Operacion=C, Trama=<Respuesta>
+                                    <Encabezado>
+                                        <Servicio>COBR_GINIH</Servicio>
+                                        <Status>False</Status>
+                                        <CodigoError>1</CodigoError>
+                                        <Mensaje>ined. Path 'data[0].date', line 1, position 518.</Mensaje>
+                                        <Cabezera></Cabezera>
+                                    </Encabezado>
+                                    <Detalle>
+                                        
+                                    </Detalle>
+                                </Respuesta>
+
+
+
+
+
+
+
+        private string companiesEndPoint;
+        private string tokenLogin;
+        private DateTime fechaCreacionTokenLogin;
+        private DateTime fechaExpiracionTokenLogin;
+
+        private static readonly ILogService log = new FileLogService(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        public GINIH(string Url, string User, string Password, string Domain)
+        {
+            this.url = Url;
+            string[] userPass = User.Split('|');
+            string[] endPoints = Domain.Split('|');
+
+            //Usuario y contraseña
+            this.user = userPass[0];
+            this.password = userPass[1];
+
+
+            //EndPoint de consumo de API
+            this.loginEndPoint = endPoints[0];
+            this.refreshEndPoint = endPoints[1];
+            this.consultaEndPoint = endPoints[2];
+            this.pagoEndPoint = endPoints[3];
+            this.companiesEndPoint = endPoints[4];
+            string fechaCreacionStr= endPoints[5];
+            log.Info("fechaCreacionStr: " + fechaCreacionStr);
+            //Convertimos el string que se guarda en la posición 5 en el campo Dominio(fecha de creacionStr) a un tipo de dato Fecha
+            fechaCreacionTokenLogin = DateTime.ParseExact(
+                fechaCreacionStr, "yyyy-MM",
+                CultureInfo.InvariantCulture);
+            log.Info("fechaCreacionTokenLogin: " + fechaCreacionTokenLogin);
+
+            this.fechaExpiracionTokenLogin =fechaCreacionTokenLogin.AddYears(2) ;
+
+            log.Info("fechaExpiracionTokenLogin: " + fechaExpiracionTokenLogin);
+
+            //VALIDACION DE PUERTO DE SEGURIDAD TLS
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12| SecurityProtocolType.Tls11 | SecurityProtocolType.Tls | SecurityProtocolType.Ssl3;
+
+            ServicePointManager.ServerCertificateValidationCallback = new RemoteCertificateValidationCallback(
+            delegate
+            {
+                return true;
+            });
+
+            //El refreshToken que se renueva cada 2 años se guarda en campo Password de la BD
+            this.tokenLogin = Password;
+
+            //Si viene vacio hace la peticion al EndPonit del cliente para obtener el refreshToken a utilizar
+            if(DateTime.Today >= fechaExpiracionTokenLogin || string.IsNullOrEmpty(Password))
+            {
+                tokenLogin = refreshToken(user, password);
+            }
+            else 
+            {
+                log.Info("Error con el Token");
+            }
+
+        }
+
+        #region Metodos
+        public DataTable Consulta(string companyId, string customerId)
+        {
+            string logInfo = "Consulta wsGINIH -> companyId: {0},customerId: {1}";
+            logInfo = string.Format(logInfo, companyId, customerId);
+            log.Info(logInfo);
+
+            if (string.IsNullOrEmpty(companyId))
+                throw new Exception("No se recibio CompanyId para realizar la consulta.");
+            else if (string.IsNullOrEmpty(customerId))
+                throw new Exception("No se recibio CustomerId para realizar la consulta.");
+            else
+            {
+                companyId = HttpUtility.UrlEncode(companyId);
+                customerId = HttpUtility.UrlEncode(customerId);
+
+                string body = "?companyId=" + companyId + "&customerId=" + customerId ;
+                //Graba log de peticiom enviada al ISC
+                log.Info("Peticion enviada a cliente GINIH: " + url + this.consultaEndPoint + body);
+
+                //Solicita JWT para peticion de consulta
+                string token = ProcessRequest(this.refreshEndPoint, "GET");
+                //Deserealiza respuesta del token 
+                var tokenResponse = JsonConvert.DeserializeObject<JsonMoldelResponse.loginResponse>(token);
+
+                //Obtiene valor del JWT
+                var jwt = tokenResponse.data.jwt;
+                log.Info("Respuesta del JWT:"+ jwt);
+                //Realiza peticion de Consulta a GINIH
+                string responsebody = this.ProcessRequest(this.consultaEndPoint + body,"GET",null,null,jwt);
+
+                log.Debug("Respuesta JSON Consulta a cliente GINIH: " + responsebody);
+                //Deserializa respuesta JSON del ISC
+                JsonMoldelResponse.consultaResponse responseObject = JsonConvert.DeserializeObject<JsonMoldelResponse.consultaResponse>(responsebody);
+
+                DataTable dtResponse = new DataTable();
+                dtResponse.Columns.AddRange(new DataColumn[]{
+                        new DataColumn("customerId"),
+                        new DataColumn("customerName"),
+                        new DataColumn("companyId"),
+                        new DataColumn("companyName"),
+                        new DataColumn("name"),
+                        new DataColumn("documentReference"),
+                        new DataColumn("value"),
+                        new DataColumn("receivableId")
+                    });
+
+                DataRow row = dtResponse.NewRow();
+
+
+                if (responseObject.status == "success")
+                {
+                    if (responseObject.data.Count() > 0)
+                    {
+                        for(int i = 0; i<=responseObject.data.Count; i++)
+                        {
+                            if (responseObject.data[i].status.Equals("pending") & responseObject.data[i].amount[i].currency.Equals("HNL"))
+                            {
+                                row["customerId"] = responseObject.data[0].customer.id;
+                                row["customerName"] = responseObject.data[0].customer.name.ReplaceInvalidChars();
+                                row["companyId"] = responseObject.data[0].company.id;
+                                row["companyName"] = responseObject.data[0].company.name.ReplaceInvalidChars();
+                                row["name"] = responseObject.data[0].name.ReplaceInvalidChars();
+                                row["documentReference"] = responseObject.data[0].documentReference;
+                                row["value"] = responseObject.data[0].amount[0].value;
+                                row["receivableId"] = responseObject.data[0].id;
+
+                                dtResponse.Rows.Add(row);
+
+                                return dtResponse;
+                                
+                            }
+                        }
+
+                        throw new Exception("No se encontraron pagos pendientes");
+
+                    }
+                    else
+                    {
+                        throw new Exception("Respuesta de GINIH no contiene datos");
+                    }
+
+                }
+                else
+                {
+                    var message = responseObject.code.name.ReplaceInvalidChars();
+                    if (message.Length > 90)//TODO: Agregado porque el webservice principal lo corta.
+                        throw new Exception(message.Substring(0, 89));
+                    else
+                        throw new Exception(message);
+                }
+            }
+        }
+
+
+No se cual es el error
+
+
