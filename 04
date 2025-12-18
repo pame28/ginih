@@ -1,20 +1,10 @@
 DECLARE @FECHATOKEN VARCHAR(20) = '2023-06';
 
-UPDATE W
-SET Dominio = X.NuevoDominio
-FROM WS_CobranzasON W
-CROSS APPLY (
-    SELECT STRING_AGG(
-        CASE 
-            WHEN Posicion = 6 THEN @FECHATOKEN
-            ELSE Valor
-        END, '|'
+UPDATE WS_CobranzasON
+SET Dominio =
+    LEFT(Dominio,
+         LEN(Dominio)
+         - CHARINDEX('|', REVERSE(Dominio))
     )
-    FROM (
-        SELECT 
-            ROW_NUMBER() OVER (ORDER BY (SELECT NULL)) AS Posicion,
-            value AS Valor
-        FROM STRING_SPLIT(W.Dominio, '|')
-    S
-) X (NuevoDominio)
-WHERE W.Nombre_Cliente = 'COBR_GINIH';
+    + '|' + @FECHATOKEN
+WHERE Nombre_Cliente = 'COBR_GINIH';
