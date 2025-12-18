@@ -1,0 +1,5 @@
+string fechaCreacionToken = responseObject.data.createdAt;
+// este es el formato que obtengo arriba 2023-06-05T15:22:16.309Z
+
+
+Como puedo convertir esto a un string con este formato yyyy-MM
