@@ -1,0 +1,44 @@
+  private string tokenLogin;
+        private string fechaCreacionTokenLogin;
+        private DateTime fechaExpiracionTokenLogin;
+
+        private static readonly ILogService log = new FileLogService(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        public GINIH(string Url, string User, string Password, string Domain)
+        {
+            this.url = Url;
+            string[] userPass = User.Split('|');
+            string[] endPoints = Domain.Split('|');
+
+            //Usuario y contraseña
+            this.user = userPass[0];
+            this.password = userPass[1];
+
+
+            //EndPoint de consumo de API
+            this.loginEndPoint = endPoints[0];
+            this.refreshEndPoint = endPoints[1];
+            this.consultaEndPoint = endPoints[2];
+            this.pagoEndPoint = endPoints[3];
+            this.companiesEndPoint = endPoints[4];
+
+     // La fecha de creación del Login Token se guarda en la posición 5 en el campo Dominio
+            this.fechaCreacionTokenLogin = endPoints[5];
+            this.fechaExpiracionTokenLogin =fechaCreacionTokenLogin.AddYears(2) ;
+       
+            //El refreshToken que se renueva cada 2 años se guarda en campo Password de la BD
+            this.tokenLogin = Password;
+
+       
+            //Si viene vacio hace la peticion al EndPonit del cliente para obtener el refreshToken a utilizar
+        //Esto es lo que estoy intentando hacer    
+	if(DateTime.Today >= fechaExpiracionTokenLogin )
+
+		// esto está funcional
+            if (string.IsNullOrEmpty(Password))
+            {
+                tokenLogin = refreshToken(user, password);
+            }
+
+        }
+
+Se que tengo problemas por las conversiones de datos, ayudame a solucionarlo, además, yo recibo esto 2023-06 en ese formato, pero es string, no se si me explico      
