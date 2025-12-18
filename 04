@@ -1,0 +1,18 @@
+DECLARE @NuevoValor VARCHAR(20) = @FECHATOKEN;
+
+UPDATE WS_CobranzasON
+SET Dominio = (
+    SELECT STRING_AGG(
+        CASE 
+            WHEN Posicion = 6 THEN @NuevoValor
+            ELSE Valor
+        END, '|'
+    ) WITHIN GROUP (ORDER BY Posicion)
+    FROM (
+        SELECT 
+            ROW_NUMBER() OVER (ORDER BY (SELECT NULL)) AS Posicion,
+            value AS Valor
+        FROM STRING_SPLIT(WS_CobranzasON.Dominio, '|')
+    t
+)
+WHERE Nombre_Cliente = 'COBR_GINIH';
