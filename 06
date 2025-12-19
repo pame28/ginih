@@ -1,0 +1,48 @@
+string fechaCreacionStr = endPoints.Length > 5 ? endPoints[5] : null;
+bool requiereRefresh = false;
+
+if (string.IsNullOrWhiteSpace(fechaCreacionStr))
+{
+    // No hay fecha → renovar token
+    requiereRefresh = true;
+    log.Info("Fecha de creación vacía, se requiere refreshToken");
+}
+else if (!DateTime.TryParseExact(
+            fechaCreacionStr,
+            "yyyy-MM",
+            CultureInfo.InvariantCulture,
+            DateTimeStyles.None,
+            out fechaCreacionTokenLogin))
+{
+    // Fecha inválida → renovar token
+    requiereRefresh = true;
+    log.Info("Fecha de creación inválida, se requiere refreshToken");
+}
+else
+{
+    // Fecha válida → calcular expiración
+    fechaExpiracionTokenLogin = fechaCreacionTokenLogin.AddYears(2);
+
+    if (DateTime.Today >= fechaExpiracionTokenLogin)
+    {
+        requiereRefresh = true;
+        log.Info("Token expirado, se requiere refreshToken");
+    }
+}
+
+// Validación adicional
+if (string.IsNullOrEmpty(Password))
+{
+    requiereRefresh = true;
+    log.Info("Password vacío, se requiere refreshToken");
+}
+
+// Ejecución final
+if (requiereRefresh)
+{
+    tokenLogin = refreshToken(user, password);
+}
+else
+{
+    tokenLogin = Password;
+}
